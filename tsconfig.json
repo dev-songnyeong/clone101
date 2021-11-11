@@ -1,26 +1,42 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "experimentalDecorators": true,
+    "target": "esnext",
+    "module": "esnext",
+    "jsx": "react-jsx",
     "lib": [
       "dom",
-      "dom.iterable",
-      "esnext"
+      "es2017"
     ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
     "moduleResolution": "node",
+    "allowJs": true,
+    "noEmit": true,
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "allowSyntheticDefaultImports": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "rootDir": "src",
+    "useDefineForClassFields": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types"
+    ],
+    "noFallthroughCasesInSwitch": true
   },
+  "exclude": [
+    ".git",
+    "node_modules"
+  ],
   "include": [
-    "src"
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./types/**/*.d.ts"
   ]
 }
